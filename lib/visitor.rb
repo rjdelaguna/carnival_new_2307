@@ -18,4 +18,8 @@ class Visitor
   def tall_enough?(inches)
     @height >= inches
   end
+
+  def charge_admission(price)
+    @spending_money -= price
+  end
 end

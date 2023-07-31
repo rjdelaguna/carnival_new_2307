@@ -39,7 +39,7 @@ RSpec.describe Visitor do
     it 'adds to the preference array' do
       @visitor1.add_preference(:gentle)
       @visitor1.add_preference(:thrilling)
-      
+
       expect(@visitor1.preferences).to eq([:gentle, :thrilling])
     end
   end
@@ -51,6 +51,17 @@ RSpec.describe Visitor do
       expect(@visitor2.tall_enough?(54)).to eq(false)
       expect(@visitor3.tall_enough?(54)).to eq(true)
       expect(@visitor1.tall_enough?(64)).to eq(false)
+    end
+  end
+
+  describe "#charge_admission" do
+    it 'deducts the cost from spending money' do
+
+      expect(@visitor1.spending_money).to eq(10)
+      
+      @visitor1.charge_admission(2)
+      
+      expect(@visitor1.spending_money).to eq(8)
     end
   end
 end
