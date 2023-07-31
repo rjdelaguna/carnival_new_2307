@@ -3,11 +3,8 @@ require 'spec_helper'
 RSpec.describe Visitor do
   before (:each) do
     @visitor1 = Visitor.new('Bruce', 54, '$10')
-    #<Visitor:0x000000012f2b2818 @height=54, @name="Bruce", @preferences=[], @spending_money=10>
     @visitor2 = Visitor.new('Tucker', 36, '$5')
-    #<Visitor:0x000000012f1f30f8 @height=36, @name="Tucker", @preferences=[], @spending_money=5>
     @visitor3 = Visitor.new('Penny', 64, '$15')
-    #<Visitor:0x000000012f176760 @height=64, @name="Penny", @preferences=[], @spending_money=15>
   end
 
   describe "#initialize" do
